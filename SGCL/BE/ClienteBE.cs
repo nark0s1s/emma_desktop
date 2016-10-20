@@ -16,6 +16,7 @@ namespace SGCL.BE
         private string _val_ape2;
         private string _tipo_cod_tipo_docu_iden;
         private string _val_nume_docu_iden;
+        private int _proy_oid_proy;
 
         public int oid_clie
         {
@@ -63,6 +64,12 @@ namespace SGCL.BE
         {
             get { return _val_nume_docu_iden; }
             set { _val_nume_docu_iden = value; }
+        }
+
+        public int proy_oid_proy
+        {
+            get { return _proy_oid_proy; }
+            set { _proy_oid_proy = value; }
         }
 
     }

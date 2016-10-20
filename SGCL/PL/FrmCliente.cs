@@ -108,7 +108,7 @@ namespace SGCL.PL
 
                 CargarDGV();
 
-                MessageBox.Show("Tipo de Documento de Identidad Eliminado");
+                MessageBox.Show("Cliente Eliminado");
             }
 
             else

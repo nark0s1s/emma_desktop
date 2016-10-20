@@ -8,9 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using SGCL.BR;
 using EMMA.BR;
-using SGCL;
-using SGCL.PL;
 using EMMA.BE;
+using SGCL.PL;
 
 namespace EMMA.PL
 {
@@ -18,8 +17,7 @@ namespace EMMA.PL
     {
         public FrmLogin()
         {
-            InitializeComponent();
-            txtUsuario.Focus();
+            InitializeComponent();            
         }
         
              
@@ -88,6 +86,11 @@ namespace EMMA.PL
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            txtUsuario.Focus();
         }
        
     }

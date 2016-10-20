@@ -60,9 +60,9 @@ namespace SGCL.PL
 
                 case "C":
 
-                    txtOid.Visible = true;
+                    //txtOid.Visible = true;
 
-                    txtOid.ReadOnly = true;
+                    //txtOid.ReadOnly = true;
                     txtDenoSoci.ReadOnly = false;
                     txtNom1.ReadOnly = false;
                     txtNom2.ReadOnly = false;
@@ -72,9 +72,9 @@ namespace SGCL.PL
 
                 case "U":
 
-                    txtOid.Visible = true;
+                    //txtOid.Visible = true;
 
-                    txtOid.ReadOnly = true;
+                    //txtOid.ReadOnly = true;
                     txtDenoSoci.ReadOnly = false;
 
                     ClienteBE oBE = new ClienteBE();
@@ -114,7 +114,8 @@ namespace SGCL.PL
             
             ClienteBE oBE = new ClienteBE();
             ClienteBR oBR = new ClienteBR();
-            
+
+            oBE.proy_oid_proy = EMMA.BE.Global.oid_proy;
             oBE.val_deno_soci = txtDenoSoci.Text;
             oBE.val_nom1 = txtNom1.Text;
             oBE.val_nom2 = txtNom2.Text;

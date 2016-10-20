@@ -71,7 +71,7 @@ namespace SGCL.DAO
 
             dbConnectionMySql oDB = new dbConnectionMySql();
 
-            MySqlParameter[] sqlParameters = new MySqlParameter[7];
+            MySqlParameter[] sqlParameters = new MySqlParameter[8];
             sqlParameters[0] = new MySqlParameter("?p_val_deno_soci", oClienteBE.val_deno_soci);
             sqlParameters[1] = new MySqlParameter("?p_val_nom1", oClienteBE.val_nom1);
             sqlParameters[2] = new MySqlParameter("?p_val_nom2", oClienteBE.val_nom2);
@@ -79,6 +79,7 @@ namespace SGCL.DAO
             sqlParameters[4] = new MySqlParameter("?p_val_ape2", oClienteBE.val_ape2);
             sqlParameters[5] = new MySqlParameter("?p_tipo_cod_tipo_docu_iden", oClienteBE.tipo_cod_tipo_docu_iden);
             sqlParameters[6] = new MySqlParameter("?p_val_nume_docu_iden", oClienteBE.val_nume_docu_iden);
+            sqlParameters[7] = new MySqlParameter("?p_proy_oid_proy", oClienteBE.proy_oid_proy);
 
             oDB.EjecutarDML_SP("sp_Cliente_Ins", sqlParameters);
 

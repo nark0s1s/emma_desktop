@@ -45,7 +45,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(212, 153);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 61);
-            this.btnCancelar.TabIndex = 88;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -55,7 +55,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(113, 153);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(89, 61);
-            this.btnAceptar.TabIndex = 87;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
@@ -67,7 +67,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(149, 28);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(121, 23);
-            this.txtUsuario.TabIndex = 89;
+            this.txtUsuario.TabIndex = 0;
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // txtClave
@@ -77,7 +77,7 @@
             this.txtClave.Location = new System.Drawing.Point(149, 65);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(121, 23);
-            this.txtClave.TabIndex = 90;
+            this.txtClave.TabIndex = 1;
             this.txtClave.UseSystemPasswordChar = true;
             // 
             // label1
@@ -128,13 +128,13 @@
             this.cboProyecto.Location = new System.Drawing.Point(152, 103);
             this.cboProyecto.Name = "cboProyecto";
             this.cboProyecto.Size = new System.Drawing.Size(209, 21);
-            this.cboProyecto.TabIndex = 96;
+            this.cboProyecto.TabIndex = 2;
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 253);
+            this.ClientSize = new System.Drawing.Size(414, 230);
             this.Controls.Add(this.cboProyecto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -143,8 +143,12 @@
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso al Sistema";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
