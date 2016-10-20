@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E256247-9F40-4EBB-8587-43BA5A1A5AA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EMMA</RootNamespace>
+    <AssemblyName>EMMA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SGCL.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>emma.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.6.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.6.6\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BE\ClienteBE.cs" />
+    <Compile Include="BE\ComboBoxItem.cs" />
+    <Compile Include="BE\ComedorAtencionBE.cs" />
+    <Compile Include="BE\ComedorTipoServicioBE.cs" />
+    <Compile Include="BE\ComensalBE.cs" />
+    <Compile Include="BE\ComensalComedorBE.cs" />
+    <Compile Include="BE\Global.cs" />
+    <Compile Include="BE\TurnoDetalleBE.cs" />
+    <Compile Include="BE\TurnoBE.cs" />
+    <Compile Include="BE\TipoServicioComedorBE.cs" />
+    <Compile Include="BE\LectoraBE.cs" />
+    <Compile Include="BE\ProyectoBE.cs" />
+    <Compile Include="BR\ClienteBR.cs" />
+    <Compile Include="BR\ComedorAtencionBR.cs" />
+    <Compile Include="BR\ComedorTipoServicioBR.cs" />
+    <Compile Include="BR\ComensalBR.cs" />
+    <Compile Include="BR\ComensalComedorBR.cs" />
+    <Compile Include="BR\TurnoDetalleBR.cs" />
+    <Compile Include="BR\TurnoBR.cs" />
+    <Compile Include="BR\ExcelBR.cs" />
+    <Compile Include="BR\TipoServicioComedorBR.cs" />
+    <Compile Include="BR\LectoraBR.cs" />
+    <Compile Include="BR\ProyectoBR.cs" />
+    <Compile Include="BR\TipoDocumentoIdentidadBR.cs" />
+    <Compile Include="BR\UsuarioBR.cs" />
+    <Compile Include="BR\ValorizacionBR.cs" />
+    <Compile Include="CapaDatos.cs" />
+    <Compile Include="CExcel.cs" />
+    <Compile Include="CFormateador.cs" />
+    <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\ComedorAtencionDAO.cs" />
+    <Compile Include="DAO\ComedorTipoServicioDAO.cs" />
+    <Compile Include="DAO\ComensalDAO.cs" />
+    <Compile Include="DAO\ComensalComedorDAO.cs" />
+    <Compile Include="DAO\TurnoDetalleDAO.cs" />
+    <Compile Include="DAO\TurnoDAO.cs" />
+    <Compile Include="DAO\TipoServicioComedorDAO.cs" />
+    <Compile Include="DAO\LectoraDAO.cs" />
+    <Compile Include="DAO\ProyectoDAO.cs" />
+    <Compile Include="DAO\dbConnectionMySql.cs" />
+    <Compile Include="DAO\TipoDocumentoIdentidadDAO.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="DAO\ValorizacionDAO.cs" />
+    <Compile Include="FrmCaptura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCaptura.Designer.cs">
+      <DependentUpon>FrmCaptura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\AutoClosingMessageBox .cs" />
+    <Compile Include="PL\FrmComensal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmComensal.Designer.cs">
+      <DependentUpon>FrmComensal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmComensalAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmComensalAdd.Designer.cs">
+      <DependentUpon>FrmComensalAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmComensalComedorAtencionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmComensalComedorAtencionAdd.Designer.cs">
+      <DependentUpon>FrmComensalComedorAtencionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Reportes\FrmReporteComensalesPorComedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Reportes\FrmReporteComensalesPorComedor.Designer.cs">
+      <DependentUpon>FrmReporteComensalesPorComedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Reportes\FrmReporteValorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Reportes\FrmReporteValorizacion.Designer.cs">
+      <DependentUpon>FrmReporteValorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmTurnoCaptura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmTurnoCaptura.Designer.cs">
+      <DependentUpon>FrmTurnoCaptura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmTurnoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmTurnoAdd.Designer.cs">
+      <DependentUpon>FrmTurnoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmTurno.Designer.cs">
+      <DependentUpon>FrmTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmCargarComensal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmCargarComensal.Designer.cs">
+      <DependentUpon>FrmCargarComensal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmTipoServicioComedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmTipoServicioComedor.Designer.cs">
+      <DependentUpon>FrmTipoServicioComedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmTipoServicioComedorAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmTipoServicioComedorAdd.Designer.cs">
+      <DependentUpon>FrmTipoServicioComedorAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmComedorTipoServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmComedorTipoServicio.Designer.cs">
+      <DependentUpon>FrmComedorTipoServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmComedorTipoServicioAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmComedorTipoServicioAdd.Designer.cs">
+      <DependentUpon>FrmComedorTipoServicioAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmLectora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmLectora.Designer.cs">
+      <DependentUpon>FrmLectora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmLectoraAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmLectoraAdd.Designer.cs">
+      <DependentUpon>FrmLectoraAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmComedorAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmComedorAtencion.Designer.cs">
+      <DependentUpon>FrmComedorAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmComedorAtencionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmComedorAtencionAdd.Designer.cs">
+      <DependentUpon>FrmComedorAtencionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmProyecto.Designer.cs">
+      <DependentUpon>FrmProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmProyectoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmProyectoAdd.Designer.cs">
+      <DependentUpon>FrmProyectoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmClienteAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmClienteAdd.Designer.cs">
+      <DependentUpon>FrmClienteAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\CHelper.cs" />
+    <Compile Include="PL\FrmTipoDocumentoIdentidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmTipoDocumentoIdentidad.Designer.cs">
+      <DependentUpon>FrmTipoDocumentoIdentidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmTipoDocumentoIdentidadAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmTipoDocumentoIdentidadAdd.Designer.cs">
+      <DependentUpon>FrmTipoDocumentoIdentidadAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Ticket.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BE\TipoDocumentoIdentidadBE.cs" />
+    <EmbeddedResource Include="FrmCaptura.resx">
+      <DependentUpon>FrmCaptura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmComensal.resx">
+      <DependentUpon>FrmComensal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmComensalAdd.resx">
+      <DependentUpon>FrmComensalAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmComensalComedorAtencionAdd.resx">
+      <DependentUpon>FrmComensalComedorAtencionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Reportes\FrmReporteComensalesPorComedor.resx">
+      <DependentUpon>FrmReporteComensalesPorComedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Reportes\FrmReporteValorizacion.resx">
+      <DependentUpon>FrmReporteValorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmTurnoCaptura.resx">
+      <DependentUpon>FrmTurnoCaptura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmTurnoAdd.resx">
+      <DependentUpon>FrmTurnoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmTurno.resx">
+      <DependentUpon>FrmTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmCargarComensal.resx">
+      <DependentUpon>FrmCargarComensal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmTipoServicioComedor.resx">
+      <DependentUpon>FrmTipoServicioComedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmTipoServicioComedorAdd.resx">
+      <DependentUpon>FrmTipoServicioComedorAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmComedorTipoServicio.resx">
+      <DependentUpon>FrmComedorTipoServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmComedorTipoServicioAdd.resx">
+      <DependentUpon>FrmComedorTipoServicioAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmLectora.resx">
+      <DependentUpon>FrmLectora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmLectoraAdd.resx">
+      <DependentUpon>FrmLectoraAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmComedorAtencion.resx">
+      <DependentUpon>FrmComedorAtencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmComedorAtencionAdd.resx">
+      <DependentUpon>FrmComedorAtencionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmProyecto.resx">
+      <DependentUpon>FrmProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmProyectoAdd.resx">
+      <DependentUpon>FrmProyectoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmClienteAdd.resx">
+      <DependentUpon>FrmClienteAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmTipoDocumentoIdentidad.resx">
+      <DependentUpon>FrmTipoDocumentoIdentidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmTipoDocumentoIdentidadAdd.resx">
+      <DependentUpon>FrmTipoDocumentoIdentidadAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="emma.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
