@@ -104,11 +104,14 @@ namespace SGCL.PL
                     oid = int.Parse(dgv.Rows[0].Cells[0].Value.ToString());
                 }
 
-                oBR.Eliminar(oid);
+                if (DialogResult.Yes == MessageBox.Show("¿ Esta seguro que desea eliminar el cliente ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    oBR.Eliminar(oid);
 
-                CargarDGV();
+                    CargarDGV();
 
-                MessageBox.Show("Cliente Eliminado");
+                    MessageBox.Show("Cliente Eliminado");
+                }                                
             }
 
             else

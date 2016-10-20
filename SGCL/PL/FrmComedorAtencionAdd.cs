@@ -46,15 +46,17 @@ namespace SGCL.PL
 
             CHelper oCHelper = new CHelper();
             oCHelper.FormatearFormularioMantenimientoAdd(this);
-                                    
+
+            CargarComboEstado();
+            
             switch (this.mod)
             {
 
                 case "C":
 
-                    txtOid.Visible = true;
+                    //txtOid.Visible = true;
 
-                    txtOid.ReadOnly = true;
+                    //txtOid.ReadOnly = true;
                     txtDescripcion.ReadOnly = false;
 
                     txtProyecto.Text = Global.des_proy;
@@ -63,7 +65,7 @@ namespace SGCL.PL
 
                 case "U":
 
-                    txtOid.Visible = true;
+                    //txtOid.Visible = true;
 
                     txtOid.ReadOnly = true;
                     txtDescripcion.ReadOnly = false;
@@ -94,14 +96,14 @@ namespace SGCL.PL
 
             oBE.val_desc = txtDescripcion.Text;
 
-            if (rbtActivo.Checked == true)
+            if ((cboEstado.SelectedItem as ComboBoxItem).Value.ToString() == "1")
             {
                 oBE.ind_acti = 1;
             }
             else
             {
                 oBE.ind_acti = 0;
-            }
+            };
 
             if (mod == "C")
             {                
@@ -118,6 +120,21 @@ namespace SGCL.PL
 
             this.Close();
                         
+        }
+
+        private void CargarComboEstado()
+        {
+            ComboBoxItem itemActivo = new ComboBoxItem();
+            itemActivo.Text = "Activo";
+            itemActivo.Value = 1;
+            cboEstado.Items.Add(itemActivo);
+
+            ComboBoxItem itemInactivo = new ComboBoxItem();
+            itemInactivo.Text = "Inactivo";
+            itemInactivo.Value = 0;
+            cboEstado.Items.Add(itemInactivo);
+
+            cboEstado.SelectedIndex = 0;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

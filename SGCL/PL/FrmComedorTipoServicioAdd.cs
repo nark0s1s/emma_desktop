@@ -65,17 +65,7 @@ namespace SGCL.PL
             cboTipoServicio.DataSource = dt2;
             cboTipoServicio.DisplayMember = "Descripcion";
 
-            ComboBoxItem itemActivo = new ComboBoxItem();
-            itemActivo.Text = "Activo";
-            itemActivo.Value = 1;
-            cboEstado.Items.Add(itemActivo);
-
-            ComboBoxItem itemInactivo = new ComboBoxItem();
-            itemInactivo.Text = "Inactivo";
-            itemInactivo.Value = 0;            
-            cboEstado.Items.Add(itemInactivo);
-
-            cboEstado.SelectedIndex = 0;
+            CargarComboEstado();
 
             switch (this.mod)
             {
@@ -161,8 +151,21 @@ namespace SGCL.PL
 
         }
 
-        
-        
+
+        private void CargarComboEstado()
+        {
+            ComboBoxItem itemActivo = new ComboBoxItem();
+            itemActivo.Text = "Activo";
+            itemActivo.Value = 1;
+            cboEstado.Items.Add(itemActivo);
+
+            ComboBoxItem itemInactivo = new ComboBoxItem();
+            itemInactivo.Text = "Inactivo";
+            itemInactivo.Value = 0;
+            cboEstado.Items.Add(itemInactivo);
+
+            cboEstado.SelectedIndex = 0;
+        }
 
         
         

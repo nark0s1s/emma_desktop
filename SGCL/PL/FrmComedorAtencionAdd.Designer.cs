@@ -37,10 +37,8 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.txtOid = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtActivo = new System.Windows.Forms.RadioButton();
             this.txtProyecto = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtSegundoNombreLabel
@@ -143,29 +141,6 @@
             this.textBox1.Text = "Proyecto  ";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbtActivo);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(199, 136);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(117, 35);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            // 
-            // rbtActivo
-            // 
-            this.rbtActivo.AutoSize = true;
-            this.rbtActivo.Font = new System.Drawing.Font("VAGRounded BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtActivo.ForeColor = System.Drawing.Color.White;
-            this.rbtActivo.Location = new System.Drawing.Point(21, 8);
-            this.rbtActivo.Name = "rbtActivo";
-            this.rbtActivo.Size = new System.Drawing.Size(70, 24);
-            this.rbtActivo.TabIndex = 1;
-            this.rbtActivo.TabStop = true;
-            this.rbtActivo.Text = "Activo";
-            this.rbtActivo.UseVisualStyleBackColor = true;
-            // 
             // txtProyecto
             // 
             this.txtProyecto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -176,13 +151,23 @@
             this.txtProyecto.Size = new System.Drawing.Size(517, 26);
             this.txtProyecto.TabIndex = 78;
             // 
+            // cboEstado
+            // 
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstado.Font = new System.Drawing.Font("VAGRounded BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(201, 144);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(117, 27);
+            this.cboEstado.TabIndex = 80;
+            // 
             // FrmComedorAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 295);
+            this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.txtProyecto);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtOid);
             this.Controls.Add(this.txtSegundoNombreLabel);
@@ -193,8 +178,6 @@
             this.Controls.Add(this.btnGrabar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmComedorAdd";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,9 +193,8 @@
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.TextBox txtOid;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbtActivo;
         private System.Windows.Forms.TextBox txtProyecto;
+        private System.Windows.Forms.ComboBox cboEstado;
 
     }
 }
